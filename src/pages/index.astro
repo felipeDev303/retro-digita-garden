@@ -1,16 +1,60 @@
 ---
-
+import Plant from "../components/RetroIcons/Plant.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+const pageTitle = "Inicio";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <!--<div class="nes-container is-dark with-title">
+    <p class="title">Bienvenidos a mi Digital Garden</p>
+    <div class="lists">
+      <ul class="nes-list is-circle">
+        <p>Este es mi Digital Garden</p>
+      </ul>
+      <p>Aquí encontrarás lo que no estabas buscando</p>
+
+      <p>
+        Desarrollado con <i class="nes-icon is-small heart"></i>, Astro y
+        NES.css.
+      </p>
+    </div>
+  </div> -->
+  <!-- Balloon 'is-dark'  -->
+  <section class="nes-container is-dark">
+    <section class="message-list">
+      <section class="message -left">
+        <img
+          src="/public/icons/plant.svg"
+          alt="Plant"
+          class="nes-icon is-large"
+        />
+        <!-- Plantita -->
+        <div class="nes-balloon from-left is-dark">
+          <p>Bienvenidos a mi Digital Garden</p>
+        </div>
+      </section>
+
+      <section class="message -right">
+        <!-- Laptop -->
+        <div class="nes-balloon from-right is-dark">
+          <p>Aquí encontrarás lo que no estabas buscando.</p>
+        </div>
+        <img src="/public/icons/book.svg" class="nes-icon is-large" />
+      </section>
+      <section class="message -left">
+        <img
+          src="/public/icons/laptop.svg"
+          alt="Plant"
+          class="nes-icon is-large"
+        />
+        <!-- Balloon -->
+        <div class="nes-balloon from-left is-dark">
+          <p>
+            Desarrollado con <i class="nes-icon is-small heart"></i>, Astro y
+            NES.css.
+          </p>
+        </div>
+      </section>
+    </section>
+  </section>
+</BaseLayout>
